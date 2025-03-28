@@ -87,7 +87,9 @@ a {
   color: var(--color-main);
   padding: 10px 20px;
   border-radius: 5px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   border: none;
   cursor: default;
@@ -151,6 +153,7 @@ footer {
   .button-container {
     flex-direction: column;
     gap: 1.5vw;
+    margin-top: 5%;
   }
 
   .membership-table {
@@ -171,12 +174,15 @@ footer {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .button1 {
     font-size: 1rem;
     padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
