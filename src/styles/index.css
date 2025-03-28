@@ -1,5 +1,43 @@
 @import url('colors.css');
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../font/NanumSquare_acB.ttf') format('truetype'); /* TTF 파일 경로 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'MyCustomFont', Arial, sans-serif;
+  color: var(--color-sub);
+  overflow-x: hidden;
+  background-color: var(--color-main);
+}
+
+section {
+  padding: 2%;
+  margin: 0;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+}
+
 .container1 {
   display: flex;
   flex-direction: column;
@@ -39,6 +77,17 @@
   font-size: 1.2rem;
 }
 
+.button1 {
+  background-color: var(--color-sub);
+  color: var(--color-main);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  cursor: default;
+}
+
 .membership-table {
   width: 60%;
   border-collapse: collapse;
@@ -59,6 +108,62 @@
 
 .membership-table td {
   font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 5%;
+    transform: translateX(0); /* 모바일에서 애니메이션 없이 바로 보이게 */
+  }
+
+  .container1 .img-container {
+    width: 100%;
+  }
+
+  .container1 .text-container {
+    width: 100%;
+  }
+
+  .container1 .text-container p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+
+  .membership-table {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+
+  .membership-table th,
+  .membership-table td {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .membership-table th {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button1 {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
 }
 
 
