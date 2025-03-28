@@ -7,7 +7,7 @@
 }
 
 .container1 .img-container {
-  width: 70%;
+  width: 60%;
   max-height: 100%;
 }
 
@@ -16,12 +16,11 @@
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
-  box-shadow: 0 2px 5px var(--color-shadow);
   margin-bottom: 3%;
 }
 
 .container1 .text-container {
-  width: 70%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,8 +32,15 @@
   margin-bottom: 20px;
 }
 
+.button-container {
+  display: flex; 
+  gap: 2vw; 
+  margin: 2%;
+  font-size: 1.2rem;
+}
+
 .membership-table {
-  width: 70%;
+  width: 60%;
   border-collapse: collapse;
   text-align: left;
   margin-bottom: 3%;
@@ -42,7 +48,7 @@
 
 .membership-table th, 
 .membership-table td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-sub);
   padding: 12px;
 }
 
@@ -134,7 +140,7 @@
 }
 
 .container2 .service-box {
-  background-color: var(--color-white);
+  background-color: var(--color-sub);
   border: 1px solid var(--color-border);
   border-radius: 5px;
   padding: 20px;

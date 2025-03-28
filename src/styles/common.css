@@ -1,9 +1,16 @@
 @import url('colors.css');
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../font/NanumSquare_acB') format('truetype'); /* TTF 파일 경로 */
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--color-white);
+  font-family: 'MyCustomFont', Arial, sans-serif;
+  color: var(--color-sub);
   overflow-x: hidden;
   background-color: var(--color-main);
 }
@@ -57,7 +64,7 @@ section.show {
 
 footer {
   background-color: var(--color-dark-background);
-  color: var(--color-white);
+  color: var(--color-sub);
   text-align: center;
   padding: 1vh;
   font-size: 0.9rem;
@@ -94,17 +101,12 @@ a {
 }
 
 .button1 {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-sub);
+  color: var(--color-main);
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
   font-weight: bold;
   border: none;
-  cursor: pointer;
-}
-
-.button1:hover {
-  background-color: var(--color-text);
-  transform: scale(1.05);
+  cursor: default;
 }
