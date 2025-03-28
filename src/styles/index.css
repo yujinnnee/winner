@@ -20,14 +20,13 @@ section {
   margin: 0;
   box-sizing: border-box;
   opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out;  /* opacity만 애니메이션 */
 }
 
 section.show {
   opacity: 1;
-  transform: translateX(0);
 }
+
 
 h1 {
   font-size: 3rem;
@@ -78,7 +77,6 @@ a {
   display: flex; 
   gap: 2vw; 
   margin-top: 2.5%;
-  margin-bottom: 2%;
   font-size: 1.2rem;
 }
 
@@ -153,7 +151,8 @@ footer {
   .button-container {
     flex-direction: column;
     gap: 1.5vw;
-    margin-top: 5%;
+    margin-top: 6%;
+    margin-bottom: 1%;
   }
 
   .membership-table {

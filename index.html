@@ -132,25 +132,35 @@
 </body>
 
 <script>
+document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('section');
 
-  const revealSections = () => {
-    const triggerBottom = window.innerHeight * 0.8;
+  // 첫 번째 섹션은 페이지 로드 시 바로 표시
+  if (sections.length > 0) {
+    sections[0].classList.add('show');
+  }
 
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-
-      if (sectionTop < triggerBottom) {
-        section.classList.add('show');
-      } else {
-        section.classList.remove('show');
-      }
-    });
+  const observerOptions = {
+    threshold: 0.5,  // 50% 이상 화면에 보여지면 실행
   };
 
-  window.addEventListener('scroll', revealSections);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // 화면에 들어올 때마다 show 클래스를 제거하여 opacity를 0으로 리셋
+        entry.target.classList.remove('show');  
+        void entry.target.offsetWidth;  // 레이아웃을 강제로 리셋하여 애니메이션 초기화
+        entry.target.classList.add('show');  // show 클래스를 다시 추가하여 애니메이션을 다시 시작
+      }
+    });
+  }, observerOptions);
 
-  revealSections();
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
+
+
 </script>
 
 </html>
