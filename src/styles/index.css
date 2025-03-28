@@ -77,7 +77,8 @@ a {
 .button-container {
   display: flex; 
   gap: 2vw; 
-  margin: 2%;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
   font-size: 1.2rem;
 }
 
@@ -114,6 +115,15 @@ a {
   font-size: 1rem;
 }
 
+footer {
+  background-color: var(--color-sub);
+  color: var(--color-main);
+  text-align: center;
+  padding: 1vh;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  text-align: center;
+}
 
 @media (max-width: 768px) {
   body {
