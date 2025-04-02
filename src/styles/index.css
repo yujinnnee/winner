@@ -125,6 +125,10 @@ footer {
   text-align: center;
 }
 
+.hilight1 {
+  color: var(--color-red)
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 14px;
